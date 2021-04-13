@@ -42,7 +42,7 @@
 	
 	<label>State</label><br>
 	<select id="stateselect" name="stateselect">
-		<option value="" disabled selected><span id="choosestate">Choose State</span></option>
+		<option value="" disabled selected id="choosestate">Choose State</option>
 		<option value="AL">Alabama</option>
 		<option value="AK">Alaska</option>
 		<option value="AZ">Arizona</option>
@@ -102,6 +102,7 @@
 	<h3>Newsletter</h3>
 	<p>Select the newsletter you would like to receive</p>
 	
+
 	<radio>
 	<input type="checkbox" id="htmlnews" name="NewsLetterType" value="html">
 	<label for="htmlnews" class="checkbox">HTML News</label><br>
@@ -112,8 +113,10 @@
 	<input type="checkbox" id="javascriptnews" name="NewsLetterType" value="javascript">
 	<label for="javascriptnews">Javascript News</label><br>
 	</radio>
+	
 		
 	<p>Newsletter format</p>
+	
 	<radio>
 	<input type="radio" id="htmlformat" name="newsletterformat" value="htmlformat">
 	<label for="htmlformat">HTML</label><br>
@@ -121,6 +124,7 @@
 	<input type="radio" id="textformat" name="newsletterformat" value="textformat">
 	<label for="textformat">Plain text</label><br>
 	</radio>
+	
 	
 	<p class="othertopics">Other topics you'd like to hear about</p>
 	<textarea id="topic" name="topicrequest" placeholder="Your Message Here"></textarea><br>
