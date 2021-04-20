@@ -18,29 +18,42 @@
 	<h1>THE CODE REVIEW</h1>
 	<div class="intro">
 	<h2>Signup for our newsletter</h2>
-	<p>Get the latest news on how yoru code is doing right in your inbox.</p>
+	<p>Get the latest news on how your code is doing right in your inbox.</p>
 	</div>
 	
-	<h3 id="contactinfo">Contact Information</h3>
+
 <form>
-	
 	<div class="container">
-	<label>First Name</label><br>
-	<input type="text" id="fname" name="fname" placeholder="Required" required><br>
+	<fieldset id="contactfield">
+	<legend id="contactinfo">Contact Information</legend>
 	
-	<label>Last Name</label><br>
-	<input type="text" id="lname" name="lname" placeholder="Required" required><br>
-	
-	<label>Phone Number</label><br>
-	<input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="10"><br>
-	
-	<label>Street Address</label><br>
-	<input type="text" id="street" name="street" placeholder="123 Street"><br>
+	<div class="flex">
+	<label class="flexlabel" for="fname">Full Name</label>
+	<input class="flexinput" type="text" id="fname" name="fname" value="fname" placeholder="Required" required>
+	</div>
 		
-	<label>City</label><br>
-	<input type="text" id="city" name="city" placeholder="City"><br>
+	<div class="flex">	
+	<label class="flexlabel" for="email">Email Address</label>
+	<input class="flexinput" type="email" id="email" name="email" value="email" placeholder="Required" required>
+	</div>
 	
-	<label>State</label><br>
+	<div class="flex">
+	<label class="flexlabel" for="phone">Phone Number</label>
+	<input class="flexinput" type="tel" id="phone" name="phone" value="phone" placeholder="0123456789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="10">
+	</div>
+		
+	<div class="flex">	
+	<label class="flexlabel" for="street">Street Address</label>
+	<input class="flexinput" type="text" id="street" name="street" value="street" placeholder="123 Street">
+	</div>
+	
+	<div class="flex">	
+	<label class="flexlabel" for="city">City</label>
+	<input class="flexinput" type="text" id="city" name="city" value="city" placeholder="City">
+	</div>
+	
+	<div class="flex">	
+	<label class="flexlabel" id="stateselectlabel" for="stateselect">State</label>
 	<select id="stateselect" name="stateselect">
 		<option value="" disabled selected id="choosestate">Choose State</option>
 		<option value="AL">Alabama</option>
@@ -94,16 +107,25 @@
 		<option value="WV">West Virginia</option>
 		<option value="WI">Wisconsin</option>
 		<option value="WY">Wyoming</option>
-	</select><br>
+	</select>
+	</div>
 	
-	<label>Zip Code</label><br>
-	<input type="text" id="zip" name="zip" maxlength="5" placeholder="5 Digit Zip"><br>
-	
-	<h3>Newsletter</h3>
+	<div class="flex">	
+	<label class="flexlabel" for="zip">Zip Code</label>
+		
+	<div class="flexinput">
+	<input type="text" id="zip" name="zip" maxlength="5" value="zip" placeholder="5 Digit Zip">
+	</div>
+		
+	</div>
+		
+	</fieldset>
+		
+	<fieldset>
+	<legend id="NewsLetterLegend">Newsletter</legend>
 	<p>Select the newsletter you would like to receive</p>
 	
 
-	<radio>
 	<input type="checkbox" id="htmlnews" name="NewsLetterType" value="html">
 	<label for="htmlnews" class="checkbox">HTML News</label><br>
 		
@@ -112,25 +134,22 @@
 	
 	<input type="checkbox" id="javascriptnews" name="NewsLetterType" value="javascript">
 	<label for="javascriptnews">Javascript News</label><br>
-	</radio>
 	
 		
 	<p>Newsletter format</p>
 	
-	<radio>
 	<input type="radio" id="htmlformat" name="newsletterformat" value="htmlformat">
 	<label for="htmlformat">HTML</label><br>
 		
 	<input type="radio" id="textformat" name="newsletterformat" value="textformat">
 	<label for="textformat">Plain text</label><br>
-	</radio>
 	
 	
-	<p class="othertopics">Other topics you'd like to hear about</p>
+	<label for="topic" id="othertopics">Other topics you'd like to hear about</label>
 	<textarea id="topic" name="topicrequest" placeholder="Your Message Here"></textarea><br>
 	
 	<button type="submit">Sign Up</button>
-	
+	</fieldset>
 	</div>	
 		
 	</form>
